@@ -1,10 +1,10 @@
-class userEntity {
+class UserEntity {
   final String userId;
   final String email;
   final String name;
   final bool hasactivecart;
 
-  userEntity(
+  UserEntity(
       {required this.userId,
       required this.email,
       required this.name,
@@ -19,8 +19,8 @@ class userEntity {
     };
   }
 
-  userEntity fromDocument(Map<String, dynamic> doc) {
-    return userEntity(
+  UserEntity fromDocument(Map<String, dynamic> doc) {
+    return UserEntity(
         userId: doc["userId"],
         email: doc["email"],
         name: doc["name"],
