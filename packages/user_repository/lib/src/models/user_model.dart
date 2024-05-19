@@ -1,7 +1,7 @@
 import 'package:user_repository/src/entities/user_entity.dart';
 
 class MyUser {
-  final String userId;
+    String userId;
   final String email;
   final String name;
   final bool hasactivecart;
@@ -12,14 +12,14 @@ class MyUser {
       required this.name,
       required this.hasactivecart});
 
-  final empty = MyUser(userId: "", email: "", name: "", hasactivecart: false);
+  static final empty = MyUser(userId: "", email: "", name: "", hasactivecart: false);
 
   UserEntity toEntity() {
     return UserEntity(
         userId: userId, email: email, name: name, hasactivecart: hasactivecart);
   }
 
-  MyUser fromEntity(UserEntity entity) {
+  static MyUser fromEntity(UserEntity entity) {
     return MyUser(
         userId: entity.userId,
         email: entity.email,
