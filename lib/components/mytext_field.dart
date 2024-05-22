@@ -29,6 +29,7 @@ class MytextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textInputAction: TextInputAction.next,
       controller: controller,
       focusNode: focusNode,
       keyboardType: keyboardtype,
@@ -37,6 +38,8 @@ class MytextField extends StatelessWidget {
       onTap: ontap,
       validator: validation,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.grey.shade200,
           errorText: errmessage,
           hintText: hinttext,
           prefixIcon: prifixicon,

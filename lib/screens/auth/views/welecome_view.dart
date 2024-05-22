@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pizza/blocs/bloc/authentication_bloc.dart';
 import 'package:pizza/screens/auth/blocs/signInBloc/sign_in_bloc.dart';
@@ -76,11 +77,11 @@ class _WelcomViewState extends State<WelcomView> with TickerProviderStateMixin {
                         tabs: const [
                           Padding(
                             padding:  EdgeInsets.all(10),
-                            child: Text("Sign In"),
+                            child: Text("Sign In",style: TextStyle(fontSize: 18),),
                           ),
                           Padding(
                             padding: EdgeInsets.all(10),
-                            child: Text("Sign Up"),
+                            child: Text("Sign Up",style: TextStyle(fontSize: 18),),
                           )
                         ]),
                       ),
