@@ -18,16 +18,16 @@ class Myappview extends StatelessWidget {
               onBackground: Colors.black,
               primary: Colors.blue,
               onPrimary: Colors.white)),
-              home: Scaffold(appBar: AppBar(title: Text("pizza"),),),
-      //  home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
-      //   builder: (context, state) {
-      //     if(state is AuthenticationSuccess){
-      //        return HomeView();
-      //     } else {
-      //       return WelcomView();
-      //     }
-      //   },
-      //  ),       
+              
+       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
+        builder: (context, state) {
+          if(state is AuthenticationSuccess){
+             return HomeView();
+          } else {
+            return WelcomView();
+          }
+        },
+       ),       
     );
   }
 }

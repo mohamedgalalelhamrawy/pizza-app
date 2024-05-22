@@ -4,8 +4,16 @@ import 'package:pizza/app.dart';
 import 'package:user_repository/user_repository.dart';
 
 void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+     options: const FirebaseOptions(
+    apiKey: 'key',
+    appId: 'id',
+    messagingSenderId: 'sendid',
+    projectId: 'myapp',
+    storageBucket: 'myapp-b9yt18.appspot.com',
+  )
+  );
   runApp( MyApp(userRepository: Firebase_User_repo(),));
 }
 
