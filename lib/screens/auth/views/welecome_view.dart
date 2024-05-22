@@ -63,7 +63,7 @@ class _WelcomViewState extends State<WelcomView> with TickerProviderStateMixin {
               Align(
                 alignment: Alignment.center,
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.9,
+                  height: MediaQuery.of(context).size.height / 1.5,
                   child: Column(
                     children: [
                       Padding(

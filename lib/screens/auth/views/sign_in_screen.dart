@@ -101,6 +101,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 20,
                 ),
+                !signInRequire?
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: TextButton(
@@ -119,7 +120,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       )
                     ),
                   ),
-                )
+                ) : CircularProgressIndicator()
               ],
             ),
           ),
