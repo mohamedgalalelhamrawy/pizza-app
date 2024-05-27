@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pizza/blocs/bloc/authentication_bloc.dart';
+import 'package:pizza/screens/auth/blocs/signInBloc/sign_in_bloc.dart';
 import 'package:pizza/screens/auth/views/welecome_view.dart';
 import 'package:pizza/screens/home/views/home_view.dart';
 
@@ -22,9 +23,16 @@ class Myappview extends StatelessWidget {
        home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
           if(state is AuthenticationSuccess){
-             return HomeView();
+            return  BlocProvider(
+              create: (context) => SignInBloc(
+                context.read<AuthenticationBloc>().userRepository
+              ),
+              child:  HomeView(),
+            );
+            
           } else {
-            return WelcomView();
+            return HomeView();
+            // return WelcomView();
           }
         },
        ),       

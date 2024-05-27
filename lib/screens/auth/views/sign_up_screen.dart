@@ -244,13 +244,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             MyUser myuser = MyUser.empty;
                             myuser.name = namecontroller.text;
                             myuser.email = emailcontroller.text;
-                            context.read<SignUpBloc>().add(SignUpRequired(
+                            setState(() {
+                              context.read<SignUpBloc>().add(SignUpRequired(
                                 password: passwordcontroller.text,
                                 user: myuser));
+                            });
                           }
                         },
                          child: Text(
-                          "Sign In",
+                          "Sign Up",
                           style:  TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
