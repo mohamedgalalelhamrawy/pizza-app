@@ -31,8 +31,8 @@ class Myappview extends StatelessWidget {
             );
             
           } else {
-            return HomeView();
-            // return WelcomView();
+            // return HomeView();
+            return WelcomView();
           }
         },
        ),       
